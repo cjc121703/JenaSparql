@@ -7,9 +7,9 @@ import java.nio.charset.Charset;
 public class JenaSparqlConversionTest {
     @Test
     public void testQuery(){
-        String data = getFile("shapesui.ttl");
+        String data = getFile("person.ttl");
         JenaSparqlExecution execution = new JenaSparqlExecution();
-        execution.query(data, "TTL", "select * where {?s ?p ?o.  ?s <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ecp.thomsonreuters.com/shapes/registryUI>. }");
+        execution.query(data, "TTL", "select * where {?s ?p ?o. }");
     }
 
     private String getFile(String fileName){
